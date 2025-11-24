@@ -1,7 +1,27 @@
 {
   "permissions": {
     "allow": [
-      "Bash(python:*)"
+      "Bash(Select-String \"INICIANDO\")",
+      "Bash(find:*)",
+      "Bash(awk:*)",
+      "Bash(cat:*)",
+      "Bash(gunzip:*)",
+      "Bash(\"C:/Program Files/R/R-4.4.2/bin/Rscript.exe\" analyze_fe_importance.R)",
+      "Bash(\"/c/Program Files/R/R-4.5.0/bin/Rscript.exe\" \"C:/Users/User/Documents/labo2025v/src/workflows/analyze_fe_importance.R\")",
+      "Bash(\"/c/Program Files/R/R-4.5.0/bin/Rscript.exe\" \"C:/Users/User/Documents/labo2025v/src/workflows/generate_comparison_report.R\")",
+      "Bash(\"C:/Users/User/Documents/labo2025v/src/rscripts/workflow_617_NO_TREND_temp.R\")",
+      "Bash(C:/Users/User/Documents/labo2025v/src/rscripts/workflow_618_ONLY_TREND.R)",
+      "Bash({ head -n 265 \"C:/Users/User/Documents/labo2025v/src/rscripts/workflow_616_BASELINE_z610.R\")",
+      "Bash(})",
+      "Bash(\"/c/Program Files/R/R-4.5.0/bin/Rscript.exe\" -e \"tryCatch({source(''''C:/Users/User/Documents/labo2025v/src/rscripts/workflow_617_NO_TREND.R'''', echo=FALSE, keep.source=TRUE); cat(''''OK\\n'''')}, error=function(e) cat(''''ERROR:'''', conditionMessage(e), ''''\\n''''))\")",
+      "Bash(\"/c/Program Files/R/R-4.5.0/bin/Rscript.exe\" -e \"tryCatch({source(''''C:/Users/User/Documents/labo2025v/src/rscripts/workflow_618_ONLY_TREND.R'''', echo=FALSE, keep.source=TRUE); cat(''''SYNTAX OK\\n'''')}, error=function(e) cat(''''SYNTAX ERROR:'''', conditionMessage(e), ''''\\n''''))\")",
+      "Bash(\"/c/Program Files/R/R-4.5.0/bin/Rscript.exe\" -e \"library(data.table); dt <- fread(''C:/Users/User/Documents/labo2025v/datasets/gerencial_competencia_2025.csv.gz''); cat(''Filas:'', nrow(dt), ''\\n''); cat(''Columnas originales:'', ncol(dt), ''\\n''); cat(''Clientes únicos:'', uniqueN(dt$numero_de_cliente), ''\\n''); cat(''Meses (foto_mes):'', paste(sort(unique(dt$foto_mes)), collapse='', ''), ''\\n'')\")",
+      "Bash(\"/c/Program Files/R/R-4.5.0/bin/Rscript.exe\" -e \"library(data.table); dt <- fread(''C:/Users/User/Documents/labo2025v/datasets/gerencial_competencia_2025.csv.gz''); cat(''Clientes:'', uniqueN(dt[,numero_de_cliente]), ''\\n''); cat(''Meses:'', paste(sort(unique(dt[,foto_mes])), collapse='', ''))\")",
+      "Bash(\"/c/Program Files/R/R-4.5.0/bin/Rscript.exe\" -e \"library(data.table); res <- fread(''C:/Users/User/Documents/labo2025v/exp/exp_only_trend/resumen_only_trend_exp6180.txt''); cat(''Ganancia promedio:'', round(mean(res$ganancia)), ''\\n''); cat(''Ganancia min:'', min(res$ganancia), ''\\n''); cat(''Ganancia max:'', max(res$ganancia), ''\\n''); cat(''Envíos promedio:'', round(mean(res$envios)), ''\\n''); cat(''AUC promedio:'', round(mean(res$mejor_auc), 4), ''\\n''); cat(''Duración promedio (min):'', round(mean(res$duracion_min), 1))\")",
+      "Bash(\"/c/Program Files/R/R-4.5.0/bin/Rscript.exe\" -e \"library(data.table); dt <- fread(''C:/Users/User/Documents/labo2025v/datasets/gerencial_competencia_2025.csv.gz''); cat(''Columnas del dataset:\\n''); print(names(dt)); cat(''\\n\\nClientes con clase_ternaria:\\n''); print(table(dt[,clase_ternaria])); cat(''\\n\\nEjemplo de cliente que tiene BAJA+2:\\n''); ejemplo <- dt[clase_ternaria == ''BAJA+2''][1:3, .(numero_de_cliente, foto_mes, clase_ternaria)]; print(ejemplo)\")",
+      "Bash(\"/c/Program Files/R/R-4.5.0/bin/Rscript.exe\" -e:*)",
+      "Bash(\"/c/Program Files/R/R-4.5.0/bin/Rscript.exe\" -e \"library(data.table); dt <- fread(''C:/Users/User/Documents/labo2025v/datasets/gerencial_competencia_2025.csv.gz''); cliente <- dt[clase_ternaria == ''BAJA+2'' & foto_mes == 202109][1]; if(nrow(cliente) > 0) { num <- cliente[,numero_de_cliente]; tray <- dt[numero_de_cliente == num, .(foto_mes, clase_ternaria)]; setorder(tray, foto_mes); cat(''Cliente que se fue en 202109 (Septiembre):\\n''); print(tray) } else { cat(''No hay BAJA+2 en 202109\\n'') }\")",
+      "Bash(\"/c/Program Files/R/R-4.5.0/bin/Rscript.exe\" -e \"library(data.table); dt <- fread(''C:/Users/User/Documents/labo2025v/datasets/gerencial_competencia_2025.csv.gz''); cat(''Distribución de BAJA+2 por mes:\\n''); print(dt[clase_ternaria == ''BAJA+2'', .N, by=foto_mes][order(foto_mes)])\")"
     ],
     "deny": [],
     "ask": []
