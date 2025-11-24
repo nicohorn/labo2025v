@@ -445,6 +445,8 @@ Ver documentación completa en:
 
 ## Autor
 
-Proyecto desarrollado para Laboratorio de Implementación de Machine Learning 2025.
+Proyecto desarrollado para Laboratorio de Implementación I 2025, Universidad Austral.
+
+Aimé Giorlando y Nicolás Horn
 
 **Fecha:** Noviembre 2025
