@@ -41,7 +41,7 @@ install.packages(c(
 ### Paso 1: Clonar el Repositorio
 
 ```bash
-git clone https://github.com/[tu-usuario]/labo2025v.git
+git clone https://github.com/nicohorn/labo2025v
 cd labo2025v
 ```
 
@@ -51,11 +51,6 @@ El dataset está incluido en el repositorio:
 ```bash
 ls -lh datasets/gerencial_competencia_2025.csv.gz
 # Debería mostrar: ~16 MB
-```
-
-Si el dataset no está presente, descargarlo:
-```bash
-# [Agregar instrucciones de descarga si es necesario]
 ```
 
 ### Paso 3: Ejecutar Experimentos
