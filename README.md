@@ -1,6 +1,6 @@
 # Experimentos de Feature Engineering para Predicción de Churn Bancario
 
-## 🚀 Guía de Reproducibilidad
+## Guía de Reproducibilidad
 
 ### Prerequisitos
 
@@ -228,7 +228,7 @@ Tiempo: ~134 min/seed
 ### 3. **WF618 (SOLO TREND) - Isolation Study**
 ```
 Features: SOLO trend_3 y trend_6 (~87)
-Ganancia: $11,535,660 (85.1% vs WF616) ⭐
+Ganancia: $11,535,660 (85.1% vs WF616) 
 Envíos: ~1,429
 Tiempo: ~44 min/seed
 ```
@@ -257,16 +257,16 @@ Tiempo: ~50 min/seed
 | Experimento | Features | Ganancia | % vs Completo | Eficiencia |
 |------------|----------|----------|---------------|------------|
 | z610 (básico) | 145 | $5.9M | 43.8% | - |
-| WF617 (sin TREND) | 631 | $5.7M | 42.2% | ❌ Peor que básico |
-| WF618 (solo TREND) | 87 | $11.5M | **85.1%** | ⭐ 13% features → 85% ganancia |
+| WF617 (sin TREND) | 631 | $5.7M | 42.2% | Peor que básico |
+| WF618 (solo TREND) | 87 | $11.5M | **85.1%** |  13% features → 85% ganancia |
 | WF616 (completo) | 689 | $13.6M | 100% | Máxima precisión |
 
 ### **Contribución por Tipo de Feature**
 
 ```
-TREND:              61.2%  ⭐⭐⭐ (el rey absoluto)
-Rolling Stats:      15.1%  ⭐⭐
-Lag Avanzado (3,6):  5.1%  ⭐
+TREND:              61.2% 
+Rolling Stats:      15.1%  
+Lag Avanzado (3,6):  5.1%  
 Lag Básico (1,2):    4.4%
 Original:            3.8%
 Delta Básico (1,2):  3.3%
@@ -309,7 +309,7 @@ mcaja_ahorro_roll_mean_3 = promedio últimos 3 meses
 mcaja_ahorro_roll_sd_3 = volatilidad
 ```
 
-### **4. TRENDS (Tendencias) ⭐ MÁS IMPORTANTE**
+### **4. TRENDS (Tendencias)  MÁS IMPORTANTE**
 Pendiente de regresión lineal sobre ventanas.
 ```
 mcaja_ahorro_trend_6 = slope de regresión en últimos 6 meses
