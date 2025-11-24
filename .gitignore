@@ -1,62 +1,74 @@
-#Archivos que considero datasets grandes, lastima que git no lo permita nativamente
+#######################################
+# Datasets                            #
+#######################################
+# Archivos grandes que git no permite nativamente
 *.csv
-*.csv.gz
+# Mantener solo el dataset principal comprimido
+# (se debe agregar manualmente con git add -f)
+
+#######################################
+# Experimentos y Cache                #
+#######################################
+# Directorio de experimentos (contiene modelos, logs, resultados)
+exp/
+
+# Videos
+Videos/
+
+# Archivos de cache de R
+*.rds
+*.RData
+*.Rdata
+*.rda
+HT.RDATA
+
+# Checkpoints de Bayesian Optimization
+*.RDATA
 
 
-# Windows image file caches
+#######################################
+# Operating System Files              #
+#######################################
+
+# Windows
 Thumbs.db
 ehthumbs.db
-
-# Folder config file
 Desktop.ini
-
-# Recycle Bin used on file shares
 $RECYCLE.BIN/
-
-# Windows Installer files
 *.cab
 *.msi
 *.msm
 *.msp
-
-# Windows shortcuts
 *.lnk
 
-# =========================
-# Operating System Files
-# =========================
-
 # OSX
-# =========================
-
 .DS_Store
 .AppleDouble
 .LSOverride
-
-# Thumbnails
 ._*
-
-# Files that might appear in the root of a volume
 .DocumentRevisions-V100
 .fseventsd
 .Spotlight-V100
 .TemporaryItems
 .Trashes
 .VolumeIcon.icns
-
-# Directories potentially created on remote AFP share
 .AppleDB
 .AppleDesktop
 Network Trash Folder
 Temporary Items
 .apdisk
 
-*.md
-*_files/
-__pycache__/
-!README.md
-*.ipynb_checkpoints/
+#######################################
+# IDEs and Editors                    #
+#######################################
 
+# Python
+__pycache__/
+*.pyc
+
+# Jupyter
+*.ipynb_checkpoints/
+*_files/
 *copia.ipynb
 
 # XCode
@@ -66,7 +78,7 @@ project.xcworkspace
 # Notepad++
 nppBackup
 
-# SublimeText project files
+# SublimeText
 *.sublime-workspace
 
 # Textmate
@@ -80,19 +92,35 @@ tmtags
 Session.vim
 .netrwhist
 
+# VS Code
+.vscode/settings.json
+
+# Claude Code
+.claude/
+
 # Editors with AutoBackup
 *~
 
 #######################################
 # File backups                        #
 #######################################
-
 *.bak
 *.backup
 
+#######################################
+# Documentation                       #
+#######################################
+# Ignorar todos los .md EXCEPTO README.md principal
+*.md
+!README.md
+# Permitir documentación específica de experimentos
+!RESUMEN_FEATURE_ENGINEERING_EXPERIMENTOS.md
+!RESUMEN_4_EXPERIMENTOS.txt
+!EXPERIMENTO_*.txt
+!GUION_VIDEO_EXPERIMENTOS_FE_FINAL.md
 
 #######################################
-# Languages                           #
+# Languages - Compiled Files          #
 #######################################
 
 # Java
@@ -101,7 +129,7 @@ Session.vim
 *.jar
 *.war
 
-# C
+# C/C++
 *.o
 *.lib
 *.a
@@ -113,16 +141,10 @@ Session.vim
 *.exe
 *.out
 *.app
-
-# C++
 *.slo
 *.lo
-*.o
-*.so
-*.dylib
 *.lai
 *.la
-*.a
 
 # Latex
 *.acn
@@ -144,7 +166,6 @@ Session.vim
 *.ind
 *.ist
 *.lof
-*.log
 *.lol
 *.lot
 *.maf
@@ -152,7 +173,6 @@ Session.vim
 *.mtc0
 *.nav
 *.nlo
-*.out
 *.pdfsync
 *.pdftex
 *.ps
@@ -165,9 +185,6 @@ Session.vim
 *.xdy
 *.tdo
 
-# Python
-*.pyc
-
 # Scala - sbt specific
 .cache
 .history
@@ -176,9 +193,5 @@ src_managed/
 project/boot/
 project/plugins/project/
 project/target
-
-# Scala - IDE specific
 .scala_dependencies
 .worksheet
-
-.vscode/settings.json
